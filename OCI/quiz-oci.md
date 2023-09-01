@@ -31,6 +31,39 @@
 * [ ] Vault 
 * [ ] Audit 
 
+####    22: Security-Platform
+
+####    Which OCI Security service protects web applications and APIs from common web exploits that can affect availability or security?
+* [X] OCI Web Application Firewall (*)
+* [ ] OCI Threat Intelligence
+* [ ] OCI Security Zones
+* [ ] OCI Network Firewall
+
+####    Which of the following statements best explains why a dynamic group is needed for Certificate Authority creation in OCI Certificates service?
+* [X] A dynamic group is necessary to allow the Certificate Authority to make API calls to Vault or Object Storage services. (*)
+* [ ] A dynamic group is not necessary for creating a Certificate Authority.
+* [ ] A dynamic group is necessary to create TLS certificates after the Certificate Authority is created.
+* [ ] A dynamic group is necessary to manage the Certificate Authority's revocation list.
+
+####    What is the purpose of the Vulnerability Scanning service in Oracle Cloud Infrastructure?
+* [ ] To perform network scans of all public-facing IPs on the targeted instances
+* [X] To identify and prioritize vulnerabilities in OCI compute instances and containers (*)
+* [ ] To provide remediation actions for customers to address vulnerabilities
+* [ ] To scan and report on the health of OCI compute instances and containers
+
+####    Which type of rule do you need to configure in OCI WAF to protect your web applications from various types of threats like SQL injection, cross-site scripting, and HTML injection?
+* [ ] Rate limiting rule
+* [X] Protection rule (*)
+* [ ] Access control rule
+* [ ] Bot management
+
+####    Which of the following can you do using Oracle Cloud Infrastructure Certificates service?
+* [ ] Import certificates issued by a third-party CA.
+* [ ] Create and manage certificate authorities (CAs), certificates, and CA bundles.
+* [X] All of the above (*)
+* [ ] Configure rules to automatically renew certificates.
+
+
 ####    More Questions  ####
 
 ####    Which resource do you manage in an lnfrastructure-as-a-service (laaS) offering?
