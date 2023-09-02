@@ -131,6 +131,43 @@
 * [ ] Statistic
 * [ ] Resolution
 
+#### 26: Observability and Management - Logging
+
+####    You have a requirement to collect custom logs from an on-premises external application and archive low-priority log data into Object Storage buckets. Which two of the following options are involved in achieving this?
+* [ ] Cloud Agent Plugin
+* [ ] Topics
+* [ ] Monitoring Alarms
+* [X] Fluentd Agent (*)
+* [X] Service Connectors (*)
+
+####    Which statement best describes the purpose of a log group in the OCI Logging service?
+* [ ] A log group is used to filter log data collected from a specific log source.
+* [ ] A log group is used to archive log data collected from a specific log source.
+* [ ] A log group is used to define the format of log data collected from a specific log source.
+* [X] A log group is used to organize log data from multiple log sources that share common properties. (*)
+
+####    In OCI Logging service, an Agent Configuration is created to enable Custom log ingestion from Compute Instances. As part of the Agent Configuration, which of the following is selected to choose Instances to ingest logs from the Compartment?
+* [ ] Log Inputs
+* [ ] Parsers
+* [X] Host Group (*)
+* [ ] Log Destination
+* [ ] Security List
+
+####    Which two are log categories of Object Storage Service Logs?
+* [ ] Deployment Events
+* [X] Write Access Events (*)
+* [X] Read Access Events (*)
+* [ ] Archive Events
+* [ ] Total Usage Events
+
+####    Which three types of logs are used by the Logging service?
+* [ ] Alert Logs
+* [X] Custom Logs (*)
+* [X] Audit Logs (*)
+* [ ] Archive Logs
+* [X] Service Logs (*)
+* [ ] Trace Logs
+
 ####    More Questions  ####
 
 ####    Which resource do you manage in an lnfrastructure-as-a-service (laaS) offering?
