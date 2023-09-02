@@ -25,7 +25,7 @@
 * [X] Patching operating systems of compute instances (*)
 * [ ] Physical security
 
-####    You would like to examine your resources for security weakness related to configuration and upon detection suggest, assist, or take corrective actions. Which Oracle Cloud Infrastructure (OCI) security service should you use? {cm:2023-09-01} {start:2023-09-01T19:02:20}
+####    You would like to examine your resources for security weakness related to configuration and upon detection suggest, assist, or take corrective actions. Which Oracle Cloud Infrastructure (OCI) security service should you use?
 * [ ] OCI Certificates
 * [X] Cloud Guard (*)
 * [ ] Vault 
