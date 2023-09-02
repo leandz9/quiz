@@ -168,6 +168,246 @@
 * [X] Service Logs (*)
 * [ ] Trace Logs
 
+####    Compartment A is a child compartment of root.Compartment B is a child compartment of Compartment A.Compartment C is a child compartment of Compartment B.You have attached the following policy to Compartment A.Allow group NetworkAdmins to manage virtual-network-family in Compartment A.For which compartments can a user of the NetworkAdmins group manage VCNs?
+* [X] Compartment A, Compartment B, and Compartment C only (*)
+* [ ] Root compartment, Compartment A, Compartment B, and Compartment C
+* [ ] Compartment B and Compartment C only
+* [ ] Compartment A only
+
+####    Your application or workload includes big data, analytics, media processing, or content management. You require Portable Operating System Interface (POSIX)-compliant file system access semantics and concurrently accessible storage. Which storage service must you use?
+* [ ] Object Storage
+* [ ] Block Storage
+* [X] File Storage (*)
+* [ ] Vault Storage
+
+####    Which gateway allows resources within a VCN to communicate with the Internet but prevents any inbound traffic?
+* [ ] Service gateway
+* [ ] Internet gateway
+* [ ] Dynamic routing gateway
+* [X] NAT gateway (*)
+####    Which three statements about compartments are true?
+* [ ] You cannot control the type of resources that can be created within a compartment.
+* [ ] Multiple compartments can share a single resource.
+* [X] Compartments can be nested. (*)
+* [X] You can set a budget on a compartment so that you are notified as soon as the budget is exceeded. (*)
+* [X] One compartment can have resources from multiple regions. (*)
+
+####    Which OCI networking method must you use to divide your network into multiple VCNs based on departments, with each VCN having direct, private access to the others while avoiding traffic flowing over the Internet or through your on-premises network?
+* [ ] FastConnect
+* [ ] NAT gateway
+* [X] VCN peering (*)
+* [ ] Site-to-Site VPN
+####    Which two statements about local VCN peering are true?
+* [ ] The two VCNs must have overlapping CIDRs.
+* [X] You can use a single DRG for local peering. (*)
+* [X] The VCNs can be in different Oracle Cloud Infrastructure tenancies but in the same region. (*)
+* [ ] It uses an Internet gateway.
+####    You have two objects in a bucket: Object X and Object Y. Object X was last modified 14 months ago and Object Y was last modified 3 months ago. You create a retention rule with a duration of 1 year. Which two statements are true?
+* [X] Object Y cannot be modified or deleted for the next 9 months. (*)
+* [ ] Object X cannot be modified or deleted for the next 2 months.
+* [ ] Object Y can be modified or deleted immediately.
+* [X] Object X can be modified or deleted immediately. (*)
+####    Which two statements about boot volumes are true?
+* [ ] You cannot group boot volumes with block volumes into the same volume group
+* [ ] When you terminate your instance, you can keep the associated boot volume and use it to launch a new instance, but it must be of the same shape and size as the original instance.
+* [X] When you terminate the instance, you can preserve the boot volume and its data. (*)
+* [X] When you launch a virtual machine (VM) or bare metal instance based on a platform image or custom image, a new boot volume for the instance is created in the same compartment. (*)
+####    Which policy is automatically applied when you create a cloud account?
+* [ ] Allow Group Administrator to manage all-resources in all-domains
+* [ ] Allow Group Administrator to manage all-resources in all-compartments
+* [X] Allow Group Administrator to manage all-resources in tenancy (*)
+* [ ] Allow Group Administrator to manage all-resources in regions
+####    Which two statements about auth tokens are true?
+* [ ] They expire after 14 days by default.
+* [ ] They make use of a public key/private key pair.
+* [X] Every user can generate up to two auth tokens. (*)
+* [X] They can be used to authenticate third-party APIs. (*)
+####    Which Oracle-defined backup policy includes weekly incremental backups that run on Sundays, monthly incremental backups that run on the first day of the month and, also includes incremental backups that run annually during the first part of January and are retained for five years?
+* [ ] Bronze policy
+* [ ] Gold policy
+* [ ] Platinum policy
+* [X] Silver policy (*)
+####    Examine this policy-Allow group GroupMgr to manage volumes in tenancy where request.permission != 'VOLUME_DELETE', Which three actions can a user belonging to the GroupMgr group perform?
+* [X] Update volumes. (*)
+* [ ] Delete volumes.
+* [X] Move volumes. (*)
+* [X] Create volumes. (*)
+####    Which network security service allows you to separate the VCN's subnet architecture from your application security requirements?
+* [X] Network security groups (*)
+* [ ] Flow logs
+* [ ] Security lists
+* [ ] Access control
+####    At which level are retention rules configured in the Object Storage service?
+* [ ] Object level
+* [X] Bucket level (*)
+* [ ] Compartment level
+* [ ] Namespace level
+####    For maximum cost efficiency, when launching compute instances, which capacity type must you select for workloads that run periodically or for short periods of time and don't require continuous availability?
+* [ ] On-demand capacity
+* [X] Preemptible capacity (*)
+* [ ] Dedicated host
+* [ ] Capacity reservation
+####    Which three components are managed by the customer and not by Oracle in a shared security model of OCI?
+* [X] Data (*)
+* [X] Accounts and identities (*)
+* [ ] Physical hosts
+* [X] Application (*)
+* [ ] Physical networks
+####    When triggered, an alarm sends an alarm message to the configured topic. In which service is the topic configured?
+* [X] Notifications (*)
+* [ ] Management
+* [ ] Synchronization
+* [ ] Monitoring
+####    What is the allowable VCN size range?
+* [ ] /8 through /16
+* [ ] /8 through /24
+* [ ] /0 through /32
+* [X] /16 through /30 (*)
+####    An instance running in a development compartment needs to make API calls to other OCI services. How can you achieve this without configuring user credentials or setting up a configuration file?
+* [ ] Create a dynamic group with matching rules to include your instance.
+* [X] Create a dynamic group with matching rules to include your instance and write a policy for this dynamic group. (*)
+* [ ] Instances can automatically make calls to other OCI services; hence, no configuration is needed.
+* [ ] The requirement cannot be achieved by configuring user credentials or setting up a configuration file.
+####    You have enabled versioning for a bucket. What happens when you upload an object with the same name as an existing object?
+* [ ] The existing object is moved to a different bucket which has been marked for archival.
+* [ ] The object is overwritten and the overwritten object is not retained or recoverable.
+* [ ] It returns an error.
+* [X] The existing object becomes a previous version and the newly uploaded object becomes the latest version. (*)
+####    Which two connectivity options can you use to give your virtual cloud network (VCN) access to the Internet?
+* [ ] Service gateway
+* [X] NAT gateway (*)
+* [X] Internet gateway (*)
+* [ ] FastConnect
+####    Which two statements about Compute Autoscaling are true?
+* [ ] Metric-based autoscaling relies on performance metrics that are collected by the Tracking service.
+* [ ] For autoscaling to work, you must configure a load balancer.
+* [X] An autoscaling configuration can include one or more autoscaling policies. (*)
+* [X] Each instance pool can have only one autoscaling configuration. (*)
+####    What happens to traffic if there is no route rule that matches the network traffic you intend to route outside the VCN?
+* [ ] It is sent over FastConnect.
+* [X] It is dropped. (*)
+* [ ] It is sent over the Internet gateway.
+* [ ] It is sent over the NAT gateway.
+####    You want a specific set of users, who do not have IAM user credentials, to access a bucket for a duration of two days. Which mechanism can help you achieve this?
+* [ ] Creating an auto config file
+* [ ] Converting the bucket to a public bucket
+* [ ] Moving the bucket to an archive tier
+* [X] Creating pre-authenticated requests (*)
+####    Which two statements about application-based load balancers are true?
+* [ ] They act only on the TCP layer variables.
+* [ ] They are based on IP address and destination ports only.
+* [X] They perform content-based routing. (*)
+* [X] They support both HTTP and HTTPS. (*)
+####    Which Object Storage tier would you use for data that you need to access quickly, immediately, and frequently?
+* [ ] High Performance tier
+* [X] Standard tier (*)
+* [ ] Archive tier
+* [ ] Ultra High Performance tier
+* [ ] Infrequent Access tier
+####    When you create a block volume, what is its default performance level?
+* [X] Balanced (*)
+* [ ] Lower Cost
+* [ ] Ultra High Performance
+* [ ] Higher Performance
+####    When you enable Auto-Tiering, objects larger than 1 MiB are automatically moved from the Standard tier to which tier?
+* [ ] Archive tier
+* [X] Infrequent Access tier (*)
+* [ ] Backup tier
+* [ ] Redundancy tier
+####    Which Traffic Management Steering policy distributes DNS traffic to different endpoints based on the location of the end user?
+* [ ] ASN steering
+* [X] Geolocation steering (*)
+* [ ] IP prefix steering
+* [ ] Load balancer
+####    Which type of logs are emitted by API gateways, Events, and Object Storage?
+* [X] Service logs (*)
+* [ ] Custom logs
+* [ ] Audit logs
+* [ ] Archive logs
+####    Which three encryption algorithms are supported by OCI Vault?
+* [ ] IDEA
+* [X] AES (*)
+* [X] ECDSA (*)
+* [X] RSA (*)
+* [ ] HMAC
+####    Which protocol is used by FastConnect?
+* [ ] IPSec
+* [X] BGP (*)
+* [ ] OSPF
+* [ ] DNS routing
+####    Which OCI security service can you use to ensure that unwanted bots are mitigated while desirable bots are allowed to enter?
+* [ ] Data Vault
+* [X] Web Application Firewall (*)
+* [ ] Cloud Guard
+* [ ] Security Zone
+####    Which two statements about a block volume clone are true?
+* [X] It creates a single point-in-time copy of a volume without having to go through the backup and restore process. (*)
+* [ ] It makes use of Object Storage.
+* [X] You can clone a volume group. (*)
+* [ ] It is slower than a block volume backup.
+####    Which block volume performance level is recommended for throughput-intensive workloads with large sequential I/O, such as streaming, log processing, and data warehouses?
+* [ ] Balanced
+* [ ] Ultra High Performance
+* [X] Lower Cost (*)
+* [ ] Higher Performance
+####    Which two statements about Object Storage are true?
+* [X] It supports private access from Oracle Cloud Infrastructure resources in a VCN through a service gateway. (*)
+* [ ] You can back up a DB system to Object Storage only via the Internet.
+* [X] It is a regional service and is not tied to any specific compute instance. (*)
+* [ ] Archive is the default tier for Object Storage buckets.
+####    Which two statements about cloning a file system are true?
+* [X] You can only create a clone in the same availability domain as its parent file system. (*)
+* [ ] You can clone a parent file system, but you cannot create a clone of a clone.
+* [X] File system properties, such as compartment, tags, display name, keys, and mount target export information, are not copied over from the parent. (*)
+* [ ] You can also create a clone in a different availability domain to its parent file system.
+####    You want to forbid the creation of public buckets in Object Storage. Which OCI security service can you use to achieve this?
+* [ ] Web Application Firewall
+* [ ] Vault
+* [ ] Service Mesh
+* [X] Security Zones (*)
+####    Which two statements about security lists are true?
+* [ ] Each subnet can have only one security list associated with it.
+* [ ] They are applied to a group of VNICs of your choice instead of all the VNICs in a given subnet.
+* [ ] The default security list does not include a rule to allow ping requests. (*)
+* [X] The default security list allows TCP traffic on destination port 22 (SSH) from authorized source IP addresses and any source port. (*)
+####    Which two statements about private IP objects are true?
+* [ ] Each instance receives a primary private IP object and a secondary private IP object at launch.
+* [ ] Secondary private IPs must be manually deleted when you terminate the mapped instance.
+* [X] You can add a secondary private IP to either the primary VNIC or a secondary VNIC of an instance after it's launched. (*)
+* [X] A private IP can have a public IP assigned to it. (*)
+####    What is used to specify the actions that Cloud Guard can take when detectors identify problems?
+* [X] Responder (*)
+* [ ] Alarms
+* [ ] Metrics
+* [ ] Threshold
+####    You want users of the NetworkAdmins group to manage a cloud network in any compartment of a tenancy. What must you allow the NetworkAdmins group to do?
+* [X] Manage virtual-network-family in tenancy. (*)
+* [ ] Manage network-catalog-listing in tenancy.
+* [ ] Use virtual-network-family in compartment XYZ.
+* [ ] Manage instance-family in compartment ABC.
+####    Which four layers of access control are used by the File Storage service?
+* [X] NFS v.3 UNIX security (*)
+* [ ] Key management
+* [X] Network security (*)
+* [ ] Web Application Firewall
+* [X] NFS export option (*)
+* [X] Oracle Cloud Infrastructure (OCI) policy (*)
+* [ ] OCI Vault
+####    Which two statements about Site-to-Site VPN are true?
+* [ ] You cannot use multiple site-to-site connections between your on-premises network and virtual cloud network (VCN).
+* [X] It provides a site-to-site IPSec connection between your on-premises network and your virtual cloud network (VCN). (*)
+* [ ] The communication between the source and destination sites is unencrypted.
+* [X] It encrypts IP traffic before the packets are transferred from the source to the destination and decrypts the traffic when it arrives. (*)
+
+
+
+
+
+
+
+
+
+
 ####    More Questions  ####
 
 ####    Which resource do you manage in an lnfrastructure-as-a-service (laaS) offering?
