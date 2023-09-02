@@ -95,6 +95,42 @@
 * [ ] To manage and control access to data across multiple cloud providers
 * [ ] To protect data against cyberattacks and malicious actors
 
+#### 25: Observability and Management
+
+####    You are tasked to review and run routine checks for Alarms configured in the Oracle Cloud Infrastructure environment. To choose notification methods, which configuration should be updated?
+* [ ] Grouping Function
+* [ ] Streaming
+* [X] Notification Topics (*)
+* [ ] Oracle Function
+
+####    You want to filter aggregated data by a specific resource ID. What is used in Basic and Advanced Modes to achieve this?
+* [ ] Comparison Operator
+* [X] Dimension (*)
+* [ ] PostMetricData API
+* [ ] Statistic
+* [ ] Resolution
+
+####    What is the maximum duration of Alarm history stored for the Monitoring service?
+* [ ] 6 months
+* [X] 90 days (*)
+* [ ] 30 days
+* [ ] 60 days
+* [ ] 1 year
+
+####    Which three are mandatory components for defining a metric query?
+* [ ] Grouping
+* [X] Metric (*)
+* [X] Interval (*)
+* [X] Statistic (*)
+* [ ] Dimension
+
+####    Which component controls the length of each time window in a metric query?
+* [ ] Dimension
+* [X] Interval (*)
+* [ ] Namespace
+* [ ] Statistic
+* [ ] Resolution
+
 ####    More Questions  ####
 
 ####    Which resource do you manage in an lnfrastructure-as-a-service (laaS) offering?
@@ -348,3 +384,90 @@
 * [ ] Use object storage. Create a single namespace and multiple buckets to create the hierarchical directory structure.
 * [ ] Use object storage. Create multiple namespaces with one bucket each. Make the buckets publicly accessible.
 * [X] Use file storage service. Create a file system and a mount target. Share the private IP of the mount target.
+
+####    You have provisioned an Autonomous Transaction Processing (ATP) database and logged into the ATP service console. What are three abilities that can be performed from this service console? (Choose THREE).
+* [ ] Scale up/down the CPUs
+* [ ] Create ATP database users
+* [X] Reset the admin password
+* [X] Set resource management rules
+* [X] Monitor database activity and SQL queries
+
+####    What is a key benefit of Oracle Cloud Infrastructure Virtual Machine DB Systems?
+* [ ] Automated Database Memory
+* [ ] Automated backups to OCI Block Volumes
+* [X] Support for RAC DB systems/Fast Provisioning/ Scale up Block Storage Anytime
+* [ ] You need to create virtualization
+
+####    You want to leverage a managed Real Application Cluster (RAC) offering in Oracle Cloud Infrastructure. which OCI Managed database service would you choose?
+* [ ] Autonomous Transaction Processing (shared)
+* [ ] Autonomous Data Warehousing (shared)
+* [X] VM DB Systems
+* [ ] Bare Metal DB Systems
+
+####    Which of the following TWO tasks can be performed in the Oracle Cloud Infrastructure Console for Autonomous Data Warehouse?
+* [ ] Adjust Network Bandwidth
+* [ ] Scale up/down Memory
+* [X] Increase Storage allocated for Database
+* [X] Scale up/down CPU
+
+####    Which TWO Oracle Cloud Infrastructure database services allow you to dynamically scale CPU and storage?
+* [ ] Bare metal DB system
+* [ ] Virtual machine DB system
+* [X] Autonomous Data Warehouse (ADW)
+* [X] Autonomous Transaction Processing (ATP)
+
+
+
+
+
+
+
+
+#### Patric Test OCI 2023 Architect Associate 1Z0-1072-23   ####
+
+####    You are part of a team that manages a set of workload instances running in an on-premises environment. The Architect team is tasked with designing and configuring Oracle Cloud Infrastructure (OCI) Logging service to collect logs from these instances. There is a requirement to archive Info-level logging data of these instances into the OCI Object Storage. Which TWO features of OCI can help you achieve this?
+* [X] Service Connectors
+* [ ] Grouping Function
+* [X] Agent Configuration
+* [ ] ObjectCollectionRule
+* [ ] Cloud Agent Plugin
+
+####    You plan to launch a VM instance with the VM.Standard2.24 shape and Oracle Linux 8 platform image. You want to protect your VM instance from low-level threats, such as rootkits and bootkits that can infect the firmware and operating system and are difficult to detect.
+* [ ] Create a burstable instance
+* [ ] Use in-transit encryption
+* [X] Create a shielded instance
+* [ ] Use Vulnerability Scanning Service
+
+####    What security consideration should you be mindful of before performing a database migration?
+* [ ] Migration can only be done in the web-based interface of Oracle
+* [ ] Encrypt all files that are used for migration
+* [X] Backup and restore your TDE wallets from the source to the target database
+* [ ] Place the database in the restricted mode so that no one accesses it during migration
+
+####    A few Object Storage buckets in your Oracle Cloud Infrastructure (OCI) tenancy should remain public, and yet you do not want the Cloud Guard service to detect these as problems. In which TWO ways would you address this requirement?
+* [ ] Cloud Guard will keep detection ot because a public bucket is a security risk
+* [X] Dismiss the problems associated with those resources
+* [ ] Resolve or remediate those problems and you should not see Cloud Guard triggering on the resources ever again
+* [X] Fix the base line by configuring Conditional Groups for the detector
+
+####    You plan to upload a large file (3 TiB) to Oracle Cloud Infrastructure (OCI) Object Storage. You would like to minimize the impact of network failures while uploading, and therefore you decide to use the multipart upload capability. Which TWO statements are true about performing a multipart upload using the Multipart Upload API?
+* [X] When you split the object into individual parts, each part can be as large as 50 GiB
+* [ ] You do not need to split the object into parts. Object Storage splits the object into parts and uploads all of the parts automatically
+* [X] While a multipart upload is still active, you can keep adding parts as long as the total number is less than 10,000
+* [ ] You do not have to commit the uploaded all the object parts
+
+####    You need to implement automatic backups for your database system. You can easily check “Enable Automatic Backup” in the web console. Before you do that though, you need to have which of the following TWO prerequisites in place?
+* [ ] Private SSH Key to the database
+* [X] Access to the OCI Object Storage service
+* [X] Connectivity to Swift endpoints
+* [ ] VCN configured with VPN for secure access to the Oracle Cloud Infrastructure (OCI) Object Storage service
+
+####    Which THREE protocols are supported by the Oracle Cloud Infrastructure (OCI) Network Load Balancer?
+* [ ] HTTP
+* [X] TCP
+* [X] ICMP
+* [X] UDP
+* [ ] iSCSI
+* [ ] BGP
+
+####
