@@ -368,7 +368,7 @@
 ####    Which two statements about security lists are true?
 * [ ] Each subnet can have only one security list associated with it.
 * [ ] They are applied to a group of VNICs of your choice instead of all the VNICs in a given subnet.
-* [ ] The default security list does not include a rule to allow ping requests. (*)
+* [X] The default security list does not include a rule to allow ping requests. (*)
 * [X] The default security list allows TCP traffic on destination port 22 (SSH) from authorized source IP addresses and any source port. (*)
 ####    Which two statements about private IP objects are true?
 * [ ] Each instance receives a primary private IP object and a secondary private IP object at launch.
@@ -692,6 +692,36 @@
 * [ ] Virtual machine DB system
 * [X] Autonomous Data Warehouse (ADW)
 * [X] Autonomous Transaction Processing (ATP)
+####    Which SLA types is not offered by Oracle Cloud lnfrastructure compute service?
+* [X] Service Plane
+* [ ] Control Plane 
+* [ ] Data Plane
+* [ ] Performance
+####    Which TWO OCI resources can be used to group expenses?
+* [X] Tags
+* [ ] Users
+* [ ] Policies
+* [ ] Groups
+* [X] Compartmens
+####    Which TWO situations incur costs within Oracle Cloud lnfrastructure?
+* [ ] Transferring data from one instance to another within the same Availability Domain
+* [ ] Transferring data from one instance to another across different Availability Domains in a region
+* [X] Transferring data across regions
+* [X] Data egress to the Internet
+####    Which security service is offered by Oracle Cloud lnfrastructure?
+* [X] Key Management
+* [ ] Managed Active Directory
+* [ ] Managed lntrusion Detection
+* [ ] Certificate Management System
+####    Which is not considered security resource within Oracle Cloud Infrastructure (OCI)?
+* [ ] Web Application Firewall
+* [ ] Security Rules
+* [X] File Storage Services
+* [ ] Network Security Groups
+
+
+
+
 
 
 
