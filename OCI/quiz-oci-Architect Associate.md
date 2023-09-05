@@ -777,4 +777,4 @@
 * [ ] iSCSI
 * [ ] BGP
 
-####
+####    Which of the following statements is true about cloning a volume in the Oracle Cloud Infrastructure (OCI) Block Volume service?
