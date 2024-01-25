@@ -26,7 +26,7 @@
 * [X] O objetivo deve ser curto, inspirador e envolvente, além de motivar e desafiar a equipe. (*)
 
 #### Acerca dos métodos ágeis, assinale a opção que completa corretamente a lacuna da sentença abaixo.
-# _______________ é organizado por colunas que representam um fluxo trabalho pelo qual passam itens ou tarefas desenvolvidas. É visual e as atividades ficarão explícitas à todos os membros de um time.
+#### (   )é organizado por colunas que representam um fluxo trabalho pelo qual passam itens ou tarefas desenvolvidas. É visual e as atividades ficarão explícitas à todos os membros de um time.
 
 * [X] Quadro kanban (*)
 
