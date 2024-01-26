@@ -44,4 +44,43 @@
 
 * [X] Aceite a mudança para alcançar o futuro estado previsto. (*)
 
-###
+#### Qual item abaixo não é um valor do Scrum? 
+
+* [X] Adaptação (*)
+
+#### Qual das opções a seguir é o maior obstáculo na adoção dos métodos ágeis segundo a 15ª edição da pesquisa State of Agile? 
+
+* [X] Processos e práticas inconsistentes entre as equipes. (*)
+
+#### O SCRUM considera que o conhecimento vem através da experiência, este método de gestão possui valores e pilares. São pilares do SCRUM: 
+
+* [X] Adaptação, transparência e inspeção. (*)
+
+#### O principal objetivo da sprint retrospective é:
+
+* [X] Identificar as oportunidades de melhoria de desempenho e qualidade. (*)
+
+#### Das opções abaixo assinale qual representa um evento Scrum que  possui o propósito de inspecionar o incremento do produto ao fim da sprint:  
+
+* [X] Reunião de revisão (*)
+
+#### Os três pilares do Scrum são:
+
+* [X] Inspeção, transparência e adaptação. (*)
+
+#### O Método Extreme Programming (XP) é uma metodologia ágil que se destaca por sua abordagem estruturada e colaborativa no desenvolvimento de software. Nesse contexto, a alocação de papéis predefinidos dentro da equipe é fundamental para garantir a eficácia do processo. Um desses papéis cruciais é o do Coach, cuja presença e atuação são fundamentais para o sucesso do projeto. Dentro dos papéis predefinidos e distribuídos pela equipe, na utilização do método XP os objetivos do Coach são: 
+
+* [X] O coach tem conhecimento técnico e do software que está sendo desenvolvido, deve ser capaz de ajudar a equipe, facilitar reuniões e ser o guardião dos valores do método XP. (*)
+
+#### Qual das opções não é uma prática do Kanban essencial para o Scrum? 
+
+* [X] Monitoramento do trabalho em progresso por meio do cronograma. (*)
+
+
+#### O método XP adere completamente ao Manifesto Ágil e é orientado ao lado comportamental da equipe. Dentro do método existe a distribuição dos papéis para o time, com responsabilidades e tarefas distintas. Um deles é o responsável por realizar melhorias no código desenvolvido, ele possui alto grau de conhecimento técnico. Este é o papel do
+
+* [X] Cleaner (*)
+
+#### Qual das alternativas não é uma métrica usada no Kanban? 
+
+* [X] Earned value. (*)
