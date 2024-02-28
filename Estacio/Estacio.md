@@ -84,3 +84,51 @@
 #### Qual das alternativas não é uma métrica usada no Kanban? 
 
 * [X] Earned value. (*)
+
+#### PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS EM ANDROID #####
+
+#### Considere o desenvolvimento de aplicativos mobile que realizem requisições remotas utilizando AJAX (Asynchronous
+#### Javascript and XML).
+ 
+#### I. O objeto XMLHttpRequest, base de implementações como o Axios, por exemplo, desempenha importante papel,
+#### estando relacionado à comunicação assíncrona com o servidor remoto.
+#### II. Para utilizar Ajax é preciso antes instalar e configurar um servidor Ajax, o qual interage com o servidor de backend.
+#### III. Uma das características de Ajax é a exibição dinâmica de dados, gerando uma interface intuitiva.
+
+* [X] Somente as afirmativas I e II estão corretas. (*)
+
+#### A resposta de uma requisição realizada com a biblioteca Axios pode ser acessada através do objeto:
+
+* [X] Response.data. (*)
+
+#### Assinale, das opções a seguir, a afirmativa correta quanto ao propósito do componente SafeAreaView.
+
+* [X]  O objetivo do SafeAreaView é renderizar o conteúdo do aplicativo dentro dos limites da área segura de um
+dispositivo, sendo suportado apenas por dispositivos da plataforma iOS. (*)
+
+#### É muito comum carregarmos uma quantidade limitada de dados na renderização inicial de nosso aplicativo e, a partir daí, novos dados. Nesse contexto, assinale a alternativa que corresponde ao comportamento dos componentes de lista no que diz respeito ao carregamento de dados adicionais.
+
+* [X]  O Todos os componentes de lista presentes no React Native possuem propriedades e métodos nativos para tratar
+o carregamento de dados adicionais. Por meio deles, é possível tanto monitorar o acréscimo de novos dados
+como carregá-los sob demanda mediante uma interação por parte do usuário. (*)
+
+#### Os métodos da classe AsyncStorage permitem efetuar a manipulação de pares do tipo chave-valor em arquivos de texto, seguindo processos bastante simplificados, e atuando de forma assíncrona. Qual dos métodos de AsyncStorage permite a obtenção do valor armazenado no arquivo, a partir de uma chave fornecida?   
+
+* [X]  getItem (*)
+
+#### O ambiente do React Native oferece componentes para as mais diversas situações, podendo contar com algumas bibliotecas nativas e outras importadas via NPM ou YARN. Qual biblioteca deve ser importada para permitir a escrita e leitura de pares chave-valor em arquivos de texto?
+
+* [X]  @react-native-async-storage/async-storage (*)
+
+#### Indique, entre as opções abaixo, o comando utilizado para a criação de um aplicativo React Native.
+
+* [X]  npx react-native init nome_da_aplicacao (*)
+
+#### O uso da arquitetura MVC permitiu uma boa organização das responsabilidades de cada tipo de componente utilizado na programação do aplicativo. Segundo o padrão arquitetural, no ambiente do React Native, em que camadas ficariam, respectivamente, uma classe DAO e um componente nativo JSX?
+
+* [X]  Model e View. (*)
+
+#### Um componente Reducer é parte integrante da arquitetura Redux, e tem como objetivo efetuar os processos necessários para a mudança do estado representado pelo componente Store. Quais são os requisitos para a definição de uma função Reducer?
+
+* [X]   Ela deve ter como entrada um estado inicial e uma ação, além de retornar o estado modificado ao final da
+execução. (*)
