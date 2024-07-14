@@ -1,32 +1,27 @@
 ####  Uma equipe de desenvolvimento de aplicativos está projetando um microsserviço que converterá imagens grandes em imagens menores e compactadas. Quando um usuário faz upload de uma imagem por meio da interface da Web, o microsserviço deve armazenar a imagem em um bucket do Amazon S3, processar e compactar a imagem com uma função do AWS Lambda e armazenar a imagem em sua forma compactada em um bucket diferente do S3.
-
 ### Um arquiteto de soluções precisa projetar uma solução que use componentes duráveis e sem monitoração de estado para processar as imagens automaticamente.
-
 ### Que combinação de ações atenderá a esses requisitos? (Escolha dois.)
+
 * [X] Configure a função do Lambda para usar a fila do Amazon Simple Queue Service (Amazon SQS) como a origem da invocação. Quando a mensagem SQS for processada com êxito, exclua a mensagem na fila. (*)
+
 * [X] Crie uma fila do Amazon Simple Queue Service (Amazon SQS). Configure o bucket do S3 para enviar uma notificação para a fila do SQS quando uma imagem for carregada no bucket do S3. (*)
 
 ### Uma empresa tem um fluxo de trabalho de ingestão de dados que consiste no seguinte:
-
 ### • Um tópico do Amazon Simple Notification Service (Amazon SNS) para notificações sobre novas entregas de dados
-
 ### • Uma função do AWS Lambda para processar os dados e registrar metadados
-
 ### A empresa observa que o fluxo de trabalho de ingestão falha ocasionalmente devido a problemas de conectividade de rede. Quando essa falha ocorre, a função do Lambda não ingere os dados correspondentes, a menos que a empresa execute manualmente o trabalho.
-
 ### Que combinação de ações um arquiteto de soluções deve tomar para garantir que a função do Lambda ingera todos os dados no futuro? (Escolha dois.)
 
 * [X] Crie uma fila do Amazon Simple Queue Service (Amazon SQS) e inscreva-a no tópico SNS. (*)
+
 * [X] Modifique a função do Lambda para ler de uma fila do Amazon Simple Queue Service (Amazon SQS). (*)
 
 ### Uma empresa realiza manutenção mensal em sua infraestrutura da AWS. Durante essas atividades de manutenção, a empresa precisa alternar as credenciais de seus bancos de dados do Amazon RDS for MySQL em várias regiões da AWS.
-
 ### Qual solução atenderá a esses requisitos com a MENOR sobrecarga operacional?
 
 * [X] Armazene as credenciais como segredos no AWS Secrets Manager. Use a replicação secreta de várias regiões para as regiões necessárias. Configure o Gerenciador de Segredos para girar os segredos em uma agenda. (*)
 
 ### Uma empresa deseja executar seus aplicativos críticos em contêineres para atender aos requisitos de escalabilidade e disponibilidade. A empresa prefere focar na manutenção das aplicações críticas. A empresa não deseja ser responsável pelo provisionamento e gerenciamento da infraestrutura subjacente que executa a carga de trabalho em contêineres.
-
 ### O que um arquiteto de soluções deve fazer para atender a esses requisitos?
 
 * [X] Use o Amazon Elastic Container Service (Amazon ECS) no AWS Fargate. (*)
