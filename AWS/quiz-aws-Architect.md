@@ -346,12 +346,183 @@
 
 * [X] Use o Amazon Athena diretamente com o Amazon S3 para executar as consultas conforme necessário. (*)
 
-### 
+### UDEMY####
+
+### Uma empresa fornece uma interface baseada em REST para um aplicativo que permite que uma empresa parceira envie dados quase em tempo real. O aplicativo então processa os dados recebidos e os armazena para análise posterior. O aplicativo é executado em instâncias do Amazon EC2.
+### A empresa parceira recebeu muitos erros 503 de serviço indisponível ao enviar dados para o aplicativo e a capacidade de computação atinge seus limites e não consegue processar solicitações quando ocorrem picos no volume de dados.
+### Qual design um arquiteto de soluções deve implementar para melhorar a escalabilidade?
+
+* [X] Use Amazon Kinesis Data Streams para ingerir os dados. Processe os dados usando funções AWS Lambda. (*)
+
+### Um aplicativo em execução no Amazon EC2 precisa invocar de forma assíncrona uma função AWS Lambda para executar o processamento de dados. Os serviços devem ser desacoplados.
+### Qual serviço pode ser usado para desacoplar os serviços de computação?
+
+* [X] Amazon SNS. (*)
+
+### Uma empresa usa uma instância de banco de dados MySQL do Amazon RDS para armazenar dados de pedidos de clientes. A equipe de segurança solicitou que a criptografia SSL/TLS em trânsito seja usada para criptografar conexões com o banco de dados de servidores de aplicativos. Os dados no banco de dados estão atualmente criptografados em repouso usando uma chave AWS KMS.
+### Como um arquiteto de soluções pode habilitar a criptografia em trânsito?
+
+* [X] Baixe os certificados raiz fornecidos pela AWS. Use os certificados ao conectar-se à instância do RDS DB. (*)
+
+### Um novo aplicativo deve ser publicado em várias regiões ao redor do mundo. O Arquiteto precisa garantir que apenas 2 endereços IP precisem ser incluídos na lista de permissões. A solução deve rotear o tráfego de forma inteligente para a menor latência e fornecer failover regional rápido.
+### Como isso pode ser alcançado?
+
+* [X] Inicie instâncias do EC2 em várias regiões atrás de um NLB e use o AWS Global Accelerator. (*)
+### Uma empresa precisa conectar sua rede de data center local a uma nova nuvem privada virtual (VPC). Há uma conexão de internet simétrica de 100 Mbps na rede do data center. A taxa de transferência de dados para um aplicativo local é de vários gigabytes por dia. O processamento será feito usando um fluxo do Amazon Kinesis Data Firehose.
+### O que um arquiteto de soluções deve recomendar para desempenho máximo?
+
+* [X] O Kinesis Data Firehose pode ser conectado à VPC usando o AWS PrivateLink. Instale uma conexão AWS Direct Connect de 1 Gbps entre a rede local e a AWS. Para enviar dados do local para o Kinesis Data Firehose, use o endpoint do PrivateLink. (*)
+
+### Uma empresa executa um grande trabalho de processamento em lote no final de cada trimestre. O trabalho de processamento é executado por 5 dias e usa 15 instâncias do Amazon EC2. O processamento deve ser executado ininterruptamente por 5 horas por dia. A empresa está investigando maneiras de reduzir o custo do trabalho de processamento em lote.
+### Qual modelo de precificação a empresa deve escolher?
+
+* [X] Instâncias sob demanda (*)
+
+### Uma organização quer compartilhar atualizações regulares sobre seu trabalho de caridade usando páginas da web estáticas. Espera-se que as páginas gerem uma grande quantidade de visualizações do mundo todo. Os arquivos são armazenados em um bucket do Amazon S3. Um arquiteto de soluções foi solicitado a projetar uma solução eficiente e eficaz.
+### Que ação o arquiteto de soluções deve tomar para realizar isso?
+
+* [X] Use o Amazon CloudFront com o bucket S3 como origem. (*)
+
+### Uma empresa administra um site dinâmico que é hospedado em um servidor local nos Estados Unidos. A empresa está se expandindo para a Europa e está investigando como pode otimizar o desempenho do site para usuários europeus. O site deve permanecer nos Estados Unidos. A empresa requer uma solução que possa ser implementada em poucos dias.
+### O que um arquiteto de soluções deve recomendar?
+
+* [X] Use o Amazon CloudFront com uma origem personalizada apontando para os servidores locais. (*)
+
+### Uma empresa executa um aplicativo que usa um banco de dados Amazon RDS PostgreSQL. O banco de dados não está criptografado no momento. Um Solutions Architect foi instruído que, devido a novos requisitos de conformidade, todos os dados existentes e novos no banco de dados devem ser criptografados. O banco de dados passa por altos volumes de alterações e nenhum dado pode ser perdido.
+### Como o Arquiteto de Soluções pode habilitar a criptografia para o banco de dados sem incorrer em perda de dados?
+
+* [X] Crie um snapshot da instância RDS DB existente. Crie uma cópia criptografada do snapshot. Crie uma nova instância RDS DB a partir do snapshot criptografado e atualize o aplicativo. Use o AWS DMS para sincronizar dados entre os RDS DBs de origem e de destino. (*)
+
+### Uma empresa hospeda um aplicativo em instâncias do Amazon EC2 por trás de Application Load Balancers em várias regiões da AWS. Os direitos de distribuição para o conteúdo exigem que usuários em diferentes geografias recebam conteúdo de regiões específicas.
+### Qual configuração atende a esses requisitos?
+
+* [X] Crie registros do Amazon Route 53 com uma política de roteamento de geolocalização. (*)
+
+### O aplicativo de uma empresa está sendo executado em instâncias do Amazon EC2 em uma única região. No caso de um desastre, um arquiteto de soluções precisa garantir que os recursos também possam ser implantados em uma segunda região.
+### Que combinação de ações o arquiteto de soluções deve tomar para realizar isso? (Selecione DUAS.)
+
+* [X] Inicie uma nova instância do EC2 a partir de uma Amazon Machine Image (AMI) na segunda região (*)
+
+* [X] Copie uma Amazon Machine Image (AMI) de uma instância EC2 e especifique a segunda região para o destino (*)
+
+### Uma seguradora tem um aplicativo da web que atende usuários no Reino Unido e na Austrália. O aplicativo inclui uma camada de banco de dados usando um banco de dados MySQL hospedado em eu-west-2. A camada da web é executada a partir de eu-west-2 e ap-southeast-2. O roteamento de geoproximidade do Amazon Route 53 é usado para direcionar usuários para a camada da web mais próxima. Foi observado que os usuários australianos recebem tempos de resposta lentos para consultas.
+### Quais alterações devem ser feitas na camada do banco de dados para melhorar o desempenho?
+
+* [X] Migre o banco de dados para um banco de dados global Amazon Aurora no modo de compatibilidade MySQL. Configure réplicas de leitura em ap-southeast-2 (*)
+
+### Um aplicativo legado de High Performance Computing (HPC) rigidamente acoplado será migrado para a AWS. Qual tipo de adaptador de rede deve ser usado?
+
+* [X] Adaptador de Tecido Elástico (EFA) (*)
+
+### Uma empresa exige que todas as contas de usuário do AWS IAM tenham requisitos específicos de complexidade e comprimento mínimo de senha.
+### Como um arquiteto de soluções deve fazer isso?
+
+* [X] Defina uma política de senha para toda a conta da AWS. (*)
+
+### Uma empresa deseja restringir o acesso à sua tabela Amazon DynamoDB a endereços IP de origem específicos e privados de sua VPC. O que deve ser feito para proteger o acesso à tabela?
+
+* [X] Crie um ponto de extremidade VPC de gateway e adicione uma entrada à tabela de rotas (*)
+
+### Uma empresa implantou um novo site em instâncias do Amazon EC2 por trás de um Application Load Balancer (ALB). O Amazon Route 53 é usado para o serviço DNS. A empresa pediu a um Solutions Architect para criar um site de backup com detalhes de contato de suporte para os quais os usuários serão direcionados automaticamente se o site principal estiver inativo.
+### Como o arquiteto de soluções deve implantar esta solução de forma econômica?
+
+* [X] Configure um site estático usando o Amazon S3 e crie uma política de roteamento de failover do Route 53. (*)
+
+### Uma empresa de produção de vídeo está planejando mover algumas de suas cargas de trabalho para a Nuvem AWS. A empresa precisará de cerca de 5 TB de armazenamento para processamento de vídeo com o máximo desempenho de E/S possível. Eles também precisam de mais de 400 TB de armazenamento extremamente durável para armazenar arquivos de vídeo e 800 TB de armazenamento para arquivamento de longo prazo.
+### Quais combinações de serviços um Arquiteto de Soluções deve usar para atender a esses requisitos?
+
+* [X] Armazenamento de instância do Amazon EC2 para desempenho máximo, Amazon S3 para armazenamento de dados duráveis ​​e Amazon S3 Glacier para armazenamento de arquivamento. (*)
+
+### Há dois aplicativos em uma empresa: um aplicativo remetente que envia mensagens contendo payloads e um aplicativo de processamento que recebe mensagens contendo payloads. A empresa quer implementar um serviço AWS para manipular mensagens entre esses dois aplicativos diferentes. O aplicativo remetente envia em média 1.000 mensagens a cada hora e as mensagens, dependendo do tipo, às vezes levam até 2 dias para serem processadas. Se as mensagens não forem processadas, elas devem ser retidas para que não afetem o processamento de nenhuma mensagem restante.
+### Qual solução atende a esses requisitos e é a MAIS eficiente operacionalmente? 
+
+* [X] Forneça uma fila do Amazon Simple Queue Service (Amazon SQS) para os aplicativos remetente e processador. Configure uma fila de mensagens mortas para coletar mensagens com falha. (*)
+
+### Uma empresa está investigando métodos para reduzir as despesas associadas à infraestrutura de backup local. O Solutions Architect quer reduzir custos eliminando o uso de fitas de backup físicas. É um requisito que os aplicativos e fluxos de trabalho de backup existentes continuem funcionando.
+### O que o Arquiteto de Soluções deve recomendar?
+
+* [X] Conecte os aplicativos de backup a um AWS Storage Gateway usando uma biblioteca de fitas virtuais (VTL) iSCSI. (*)
+
+### Uma empresa hospeda um jogo multijogador na AWS. O aplicativo usa instâncias do Amazon EC2 em uma única Zona de Disponibilidade e os usuários se conectam pela Camada 4. O Solutions Architect foi encarregado de tornar a arquitetura altamente disponível e também mais econômica.
+### Como o arquiteto de soluções pode atender melhor a esses requisitos? (Selecione DUAS.)
+
+* [X] Configurar um balanceador de carga de rede na frente das instâncias do EC2 (*)
+
+* [X] Configurar um grupo de dimensionamento automático para adicionar ou remover instâncias em várias zonas de disponibilidade automaticamente (*)
+
+### Um farm de servidores de arquivos do Microsoft Windows usa Distributed File System Replication (DFSR) para sincronizar dados em um ambiente local. A infraestrutura está sendo migrada para a Nuvem AWS.
+### Qual serviço o arquiteto de soluções deve usar para substituir o farm de servidores de arquivos?
+
+* [X] Amazon FSx (*)
+
+### Uma equipe de topografia está usando uma frota de drones para coletar imagens de canteiros de obras. Os laptops da equipe de topografia não têm capacidade de armazenamento e computação embutida para transferir as imagens e processar os dados. Embora a equipe tenha instâncias do Amazon EC2 para processamento e buckets do Amazon S3 para armazenamento, a conectividade de rede é intermitente e não confiável. As imagens precisam ser processadas para avaliar o progresso de cada canteiro de obras.
+### O que um arquiteto de soluções deve recomendar?
+
+* [X] Processe e armazene as imagens usando dispositivos AWS Snowball Edge. (*)
+
+### Uma empresa de serviços financeiros tem um aplicativo da Web com uma camada de aplicativo em execução nos EUA e na Europa. A camada de banco de dados consiste em um banco de dados MySQL em execução no Amazon EC2 em us-west-1. Os usuários são direcionados para a camada de aplicativo mais próxima usando o roteamento baseado em latência do Route 53. Os usuários na Europa relataram desempenho ruim ao executar consultas.
+### Quais alterações um arquiteto de soluções deve fazer na camada do banco de dados para melhorar o desempenho?
+
+* [X] Migre o banco de dados para um banco de dados global Amazon Aurora no modo de compatibilidade MySQL. Configure a camada de aplicativo na Europa para usar o endpoint do leitor local. (*)
+
+### Um site é executado em instâncias do Amazon EC2 em um grupo de Auto Scaling por trás de um Application Load Balancer (ALB) que serve como origem para uma distribuição do Amazon CloudFront. Um AWS WAF está sendo usado para proteger contra ataques de injeção de SQL. Uma revisão de logs de segurança revelou um IP malicioso externo que precisa ser bloqueado para acessar o site.
+### O que um arquiteto de soluções deve fazer para proteger o aplicativo?
+
+* [X] Modifique a configuração do AWS WAF para adicionar uma condição de correspondência de IP para bloquear o endereço IP malicioso (*)
+
+### Um Solutions Architect implantou um aplicativo em várias instâncias do Amazon EC2 em três sub-redes privadas. O aplicativo deve ser disponibilizado para clientes baseados na Internet com o mínimo de esforço administrativo.
+### Como o Arquiteto de Soluções pode disponibilizar o aplicativo na internet?
+
+* [X] Crie um Application Load Balancer e associe três sub-redes públicas das mesmas Availability Zones que as instâncias privadas. Adicione as instâncias privadas ao ALB. (*)
+
+### Uma empresa planeja tornar uma instância do Amazon EC2 Linux indisponível fora do horário comercial para economizar custos. A instância é apoiada por um volume do Amazon EBS. Há um requisito de que o conteúdo da memória da instância deve ser preservado quando ela for tornada indisponível.
+### Como um arquiteto de soluções pode atender a esses requisitos?
+
+* [X] Hiberne a instância fora do horário comercial. Inicie a instância novamente quando necessário. (*)
+
+### Um aplicativo em execução em uma instância de contêiner do Amazon ECS usando o tipo de inicialização do EC2 precisa de permissões para gravar dados no Amazon DynamoDB.
+### Como você pode atribuir essas permissões apenas à tarefa específica do ECS que está executando o aplicativo?
+
+* [X] Crie uma política do IAM com permissões para o DynamoDB e atribua-a a uma tarefa usando o parâmetro taskRoleArn (*)
+
+### Um Amazon VPC contém várias instâncias do Amazon EC2. As instâncias precisam fazer chamadas de API para o Amazon DynamoDB. Um arquiteto de soluções precisa garantir que as chamadas de API não atravessem a internet.
+### Como isso pode ser feito? (Selecione DUAS.)
+
+* [X] Crie um ponto de extremidade de gateway para o DynamoDB (*)
+
+* [X] Crie uma entrada de tabela de rotas para o ponto de extremidade (*)
+
+### Um arquiteto de soluções está criando um aplicativo de envio de documentos para uma escola. O aplicativo usará um bucket do Amazon S3 para armazenamento. A solução deve impedir a exclusão acidental dos documentos e garantir que todas as versões dos documentos estejam disponíveis. Os usuários devem ser capazes de carregar e modificar os documentos.
+### Que combinação de ações deve ser tomada para atender a esses requisitos? (Selecione DUAS.)
+
+* [X] Habilitar versionamento no bucket (*)
+
+* [X] Habilitar exclusão de MFA no bucket (*)
+
+### Uma empresa executa um aplicativo em uma instância do Amazon EC2 que requer 250 GB de espaço de armazenamento. O aplicativo não é usado com frequência e tem pequenos picos de uso nas manhãs e tardes dos dias úteis. A E/S do disco pode variar com picos atingindo um máximo de 3.000 IOPS. Um arquiteto de soluções deve recomendar a solução de armazenamento mais econômica que ofereça o desempenho necessário.
+### Qual configuração o Arquiteto de Soluções deve recomendar?
+### Qual solução o arquiteto de soluções deve recomendar?
+
+* [X] Amazon EBS SSD de uso geral (gp2) (*)
+
+###
 
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-
-
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
