@@ -505,21 +505,62 @@
 
 * [X] Amazon EBS SSD de uso geral (gp2) (*)
 
-###
+### A camada de banco de dados de um aplicativo da Web está sendo executada em um servidor Windows local. O banco de dados é um banco de dados Microsoft SQL Server. O proprietário do aplicativo gostaria de migrar o banco de dados para uma instância do Amazon RDS.
+### Como a migração pode ser executada com o mínimo de esforço administrativo e tempo de inatividade?
 
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use o AWS Database Migration Service (DMS) para migrar diretamente o banco de dados para o RDS. (*)
+
+### Uma equipe está planejando executar trabalhos de análise em arquivos de log todos os dias e precisa de uma solução de armazenamento. O tamanho e o número de logs são desconhecidos e os dados persistirão por apenas 24 horas.
+### Qual é a solução MAIS econômica?
+
+* [X] Padrão Amazon S3 (*)
+
+### Uma empresa carregou alguns dados altamente críticos para um bucket do Amazon S3. A gerência está preocupada com a disponibilidade dos dados e exige que medidas sejam tomadas para proteger os dados de exclusão acidental. Os dados ainda devem estar acessíveis, e um usuário deve ser capaz de excluí-los intencionalmente.
+### Que combinação de etapas um arquiteto de soluções deve seguir para realizar isso? (Selecione DUAS.)
+
+* [X] Habilite o controle de versão no bucket S3. (*)
+
+* [X] Habilite a exclusão de MFA no bucket S3. (*)
+
+### Uma organização tem uma grande quantidade de dados em compartilhamentos de arquivos do Windows (SMB) em seu data center local. A organização gostaria de mover dados para o Amazon S3. Eles gostariam de automatizar a migração de dados por meio de seu link AWS Direct Connect.
+### Qual serviço da AWS pode ajudá-los?
+
+* [X] Sincronização de dados da AWS. (*)
+
+### Um aplicativo da web é executado em sub-redes públicas e privadas. A arquitetura do aplicativo consiste em uma camada da web e uma camada de banco de dados em execução em instâncias do Amazon EC2. Ambas as camadas são executadas em uma única Zona de Disponibilidade (AZ).
+### Qual combinação de etapas um arquiteto de soluções deve adotar para fornecer alta disponibilidade para esta arquitetura? (Selecione DUAS.)
+
+* [X] Crie um grupo de dimensionamento automático do Amazon EC2 e um balanceador de carga de aplicativos (ALB) abrangendo várias AZs (*)
+
+* [X] Crie novas sub-redes públicas e privadas na mesma VPC, cada uma em uma nova AZ. Migre o banco de dados para uma implantação multi-AZ do Amazon RDS (*)
+
+### Uma empresa de varejo com muitas lojas e depósitos está implementando sensores de IoT para coletar dados de monitoramento de dispositivos em cada local. Os dados serão enviados para a AWS em tempo real. Um arquiteto de soluções deve fornecer uma solução para garantir que os eventos sejam recebidos em ordem para cada dispositivo e garantir que os dados sejam salvos para processamento futuro.
+### Qual solução seria MAIS eficiente?
+
+* [X] Use Amazon Kinesis Data Streams para eventos em tempo real com uma chave de partição para cada dispositivo. Use Amazon Kinesis Data Firehose para salvar dados no Amazon S3 (*)
+
+### Um aplicativo de comércio eletrônico consiste em três camadas. A camada da web inclui instâncias EC2 por trás de um Application Load Balancer, a camada intermediária usa instâncias EC2 e uma fila Amazon SQS para processar pedidos, e a camada do banco de dados consiste em uma tabela Auto Scaling DynamoDB. Durante períodos de pico, os clientes reclamaram sobre atrasos no processamento de pedidos. Um Solutions Architect foi encarregado de reduzir os tempos de processamento.
+### Qual ação será MAIS eficaz para cumprir esse requisito?
+
+* [X] Use o Amazon EC2 Auto Scaling para dimensionar as instâncias de camada intermediária com base na profundidade da fila do SQS. (*)
+
+### Uma réplica de leitura do Amazon RDS está sendo implantada em uma região separada. O banco de dados mestre não é criptografado, mas todos os dados na nova região devem ser criptografados. Como isso pode ser alcançado?
+
+* [X] Criptografe um instantâneo da instância mestre do banco de dados, crie uma nova instância mestre do banco de dados criptografada e, em seguida, crie uma réplica de leitura criptografada entre regiões (*)
+
+### As instâncias do Amazon EC2 em um ambiente de desenvolvimento são executadas entre 9h e 17h, de segunda a sexta-feira. As instâncias de produção são executadas 24 horas por dia, 7 dias por semana. Quais modelos de precificação devem ser usados ​​para otimizar os custos e garantir que a capacidade esteja disponível? (Selecione DOIS.)
+
+* [X] Reservas de capacidade sob demanda para o ambiente de desenvolvimento (*)
+
+* [X] Use instâncias reservadas para o ambiente de produção (*)
+
+### Uma empresa executa um aplicativo em um data center local que coleta dados ambientais de máquinas de produção. Os dados consistem em arquivos JSON armazenados em armazenamento conectado à rede (NAS) e cerca de 5 TB de dados são coletados a cada dia. A empresa deve carregar esses dados no Amazon S3, onde podem ser processados ​​por um aplicativo de análise. Os dados devem ser transferidos com segurança.
+### Qual solução oferece a transferência de dados MAIS confiável e eficiente em termos de tempo?
+
+* [X] AWS DataSync via AWS Direct Connect. (*)
+
+### 
+
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
