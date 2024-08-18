@@ -559,11 +559,24 @@
 
 * [X] AWS DataSync via AWS Direct Connect. (*)
 
-### 
+### Uma empresa executa aplicativos em contêineres para muitas cargas de trabalho de aplicativos em um data center local. A empresa está planejando implantar contêineres na AWS e o arquiteto chefe determinou que a mesma configuração e ferramentas administrativas devem ser usadas em todos os ambientes em contêineres. A empresa também deseja permanecer agnóstica em relação à nuvem para se proteger contra o impacto de futuras mudanças na estratégia de nuvem.
+### Como um arquiteto de soluções pode projetar uma solução gerenciada que se alinhe ao software de código aberto?
 
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
-* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Inicie os contêineres no Amazon Elastic Kubernetes Service (EKS) e nos nós de trabalho do EKS. (*)
+
+### Um arquiteto de soluções está projetando um novo serviço que usará uma API do Amazon API Gateway no frontend. O serviço precisará persistir dados em um banco de dados de backend usando solicitações de chave-valor. Inicialmente, os requisitos de dados serão em torno de 1 GB e o crescimento futuro é desconhecido. As solicitações podem variar de 0 a mais de 800 solicitações por segundo.
+### Qual combinação de serviços da AWS atenderia a esses requisitos? (Selecione DUAS.)
+
+* [X] AWS Lambda (*)
+
+* [X] Amazon DynamoDB (*)
+
+### Um arquiteto de soluções está criando um sistema que executará análises em dados financeiros por várias horas por noite, 5 dias por semana. Espera-se que a análise seja executada pela mesma duração e não possa ser interrompida depois de iniciada. O sistema será necessário por no mínimo 1 ano.
+### O que o arquiteto de soluções deve configurar para garantir que as instâncias do EC2 estejam disponíveis quando necessárias?
+
+* [X] Reservas de capacidade sob demanda (*)
+
+###
+
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
