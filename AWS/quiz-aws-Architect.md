@@ -576,7 +576,133 @@
 
 * [X] Reservas de capacidade sob demanda (*)
 
+### Um aplicativo da web permite que os usuários carreguem fotos e adicionem elementos gráficos a elas. O aplicativo oferece dois níveis de serviço: gratuito e pago. Fotos carregadas por usuários pagos devem ser processadas antes daquelas enviadas usando o nível gratuito. As fotos são carregadas em um bucket do Amazon S3 que usa uma notificação de evento para enviar as informações do trabalho para o Amazon SQS.
+### Como um arquiteto de soluções deve configurar a implantação do Amazon SQS para atender a esses requisitos?
+
+* [X] Use uma fila SQS Standard separada para cada nível. Configure instâncias do Amazon EC2 para priorizar a pesquisa para a fila paga em vez da fila gratuita. (*)
+
+### O aplicativo web de uma empresa está usando várias instâncias do Amazon EC2 Linux e armazenando dados em volumes do Amazon EBS. A empresa está procurando uma solução para aumentar a resiliência do aplicativo em caso de falha.
+### O que um arquiteto de soluções deve fazer para atender a esses requisitos?
+
+* [X] Crie um Application Load Balancer com grupos de Auto Scaling em várias Availability Zones. Armazene dados no Amazon EFS e monte um destino em cada instância (*)
+
+### Uma empresa de comércio eletrônico executa um aplicativo em instâncias do Amazon EC2 em sub-redes públicas e privadas. O aplicativo da web é executado em uma sub-rede pública e o banco de dados é executado em uma sub-rede privada. Ambas as sub-redes públicas e privadas estão em uma única Zona de Disponibilidade.
+### Qual combinação de etapas um arquiteto de soluções deve adotar para fornecer alta disponibilidade para esta arquitetura? (Selecione DUAS.)
+
+* [X] Crie novas sub-redes públicas e privadas em uma AZ diferente. Migre o banco de dados para uma implantação multi-AZ do Amazon RDS. (*)
+
+* [X] Crie um grupo de dimensionamento automático do EC2 e um balanceador de carga de aplicativo que abranja várias zonas de disponibilidade. (*)
+
+### Uma empresa oferece um folheto de produto on-line que é entregue de um site estático em execução no Amazon S3. Os clientes da empresa estão principalmente nos Estados Unidos, Canadá e México. A empresa está buscando reduzir de forma econômica a latência para usuários nessas regiões.
+### Qual é a solução mais econômica para esses requisitos?
+
+* [X] Crie uma distribuição do Amazon CloudFront e defina a classe de preço para usar apenas EUA, Canadá e México. (*)
+
+### Uma empresa está migrando de uma infraestrutura local para a Nuvem AWS. Um dos aplicativos da empresa armazena arquivos em um farm de servidores de arquivos do Windows que usa Distributed File System Replication (DFSR) para manter os dados sincronizados. Um arquiteto de soluções precisa substituir o farm de servidores de arquivos.
+### Qual serviço o arquiteto de soluções deve usar?
+
+* [X] Amazon FSx (*)
+
+### Um arquiteto de soluções está projetando a infraestrutura para executar um aplicativo em instâncias do Amazon EC2. O aplicativo requer alta disponibilidade e deve ser dimensionado dinamicamente com base na demanda para ser econômico.
+### O que o arquiteto de soluções deve fazer para atender a esses requisitos?
+
+* [X] Configurar um Application Load Balancer na frente de um grupo de dimensionamento automático para implantar instâncias em várias zonas de disponibilidade (*)
+
+### Um arquiteto de soluções precisa fazer backup de alguns arquivos de log de aplicativo de uma loja de comércio eletrônico on-line para o Amazon S3. Não se sabe com que frequência os logs serão acessados ​​ou quais logs serão mais acessados. O arquiteto de soluções deve manter os custos o mais baixo possível usando a classe de armazenamento S3 apropriada.
+### Qual classe de armazenamento S3 deve ser implementada para atender a esses requisitos?
+
+* [X] S3 Intelligent-Tiering (*)
+
+### Um aplicativo está sendo criado para usar instâncias do Amazon EC2 para gerar e armazenar dados. Outro conjunto de instâncias do EC2 analisará e modificará os dados. Os requisitos de armazenamento serão significativos e continuarão a crescer ao longo do tempo. Os arquitetos de aplicativos exigem uma solução de armazenamento.
+### Quais ações atenderiam a essas necessidades?
+
+* [X] Armazene os dados em um sistema de arquivos Amazon EFS. Monte o sistema de arquivos nas instâncias do aplicativo. (*)
+
+### Uma organização da AWS tem uma UO com várias contas de membros. A empresa precisa restringir a capacidade de iniciar apenas tipos específicos de instância do Amazon EC2. Como essa política pode ser aplicada em todas as contas com o mínimo de esforço?
+
+* [X] Crie um SCP com uma regra de negação que negue todos os tipos de instância, exceto os específicos (*)
+
+### Uma empresa entrega conteúdo para assinantes distribuídos globalmente a partir de um aplicativo em execução na AWS. O aplicativo usa uma frota de instâncias do Amazon EC2 em uma sub-rede privada atrás de um Application Load Balancer (ALB). Devido a uma atualização nas restrições de direitos autorais, é necessário bloquear o acesso para países específicos.
+### Qual é o método MAIS FÁCIL de atender a esse requisito?
+
+* [X] Use o Amazon CloudFront para atender ao aplicativo e negar acesso a países bloqueados (*)
+
+### Um banco de dados persistente deve ser migrado de um servidor local para uma instância do Amazon EC2. O banco de dados requer 64.000 IOPS e, se possível, deve ser armazenado em um único volume do Amazon EBS.
+### Qual solução um arquiteto de soluções deve recomendar?
+
+* [X] Crie uma instância do Amazon EC2 baseada em Nitro com um volume Amazon EBS Provisioned IOPS SSD (i01) anexado. Provisione 64.000 IOPS para o volume. (*)
+
+### Uma empresa executa um aplicativo em uma fábrica que tem um pequeno rack de recursos de computação física. O aplicativo armazena dados em um dispositivo de armazenamento conectado à rede (NAS) usando o protocolo NFS. A empresa exige um backup diário externo dos dados do aplicativo.
+### Qual solução um Arquiteto de Soluções pode recomendar para atender a esse requisito?
+
+* [X] Use um dispositivo de hardware de gateway de arquivos do AWS Storage Gateway no local para replicar os dados para o Amazon S3. (*)
+
+### Uma empresa executa um aplicativo da Web que fornece atualizações meteorológicas. O aplicativo é executado em uma frota de instâncias do Amazon EC2 em um grupo de dimensionamento automático Multi-AZ atrás de um Application Load Balancer (ALB). As instâncias armazenam dados em um banco de dados Amazon Aurora. Um arquiteto de soluções precisa tornar o aplicativo mais resiliente a aumentos esporádicos nas taxas de solicitação.
+### Qual arquitetura o arquiteto de soluções deve implementar? (Selecione DUAS.)
+
+* [X] Adicionar réplicas do Amazon Aurora (*)
+
+* [X] Adicione uma distribuição do Amazon CloudFront na frente do ALB (*)
+
+### Uma empresa executa um aplicativo em seis servidores de aplicativos da Web em um grupo de Auto Scaling do Amazon EC2 em uma única Zona de Disponibilidade. O aplicativo é frontado por um Application Load Balancer (ALB). Um Solutions Architect precisa modificar a infraestrutura para ser altamente disponível sem fazer nenhuma modificação no aplicativo.
+### Qual arquitetura o arquiteto de soluções deve escolher para permitir alta disponibilidade?
+
+* [X] Modifique o grupo de dimensionamento automático para usar duas instâncias em cada uma das três zonas de disponibilidade. (*)
+
+### Uma empresa está implantando uma frota de instâncias do Amazon EC2 executando Linux em várias Zonas de Disponibilidade dentro de uma Região da AWS. O aplicativo requer uma solução de armazenamento de dados que possa ser acessada por todas as instâncias do EC2 simultaneamente. A solução deve ser altamente escalável e fácil de implementar. O armazenamento deve ser montado usando o protocolo NFS.
+### Qual solução atende a esses requisitos?
+
+* [X] Crie um sistema de arquivos Amazon EFS com alvos de montagem em cada Availability Zone. Configure as instâncias do aplicativo para montar o sistema de arquivos. (*)
+
+### Uma empresa tem duas contas para executar testes e cada conta tem uma única VPC: VPC-TEST1 e VPC-TEST2. A equipe de operações requer um método de cópia segura de arquivos entre instâncias do Amazon EC2 nessas VPCs. A conectividade não deve ter nenhum ponto único de falha ou restrições de largura de banda.
+### Qual solução um arquiteto de soluções deve recomendar?
+
+* [X] Crie uma conexão de peering de VPC entre VPC-TEST1 e VPC-TEST2. (*)
+
+### Um novo aplicativo será executado em várias tarefas do Amazon ECS. A lógica do aplicativo front-end processará dados e, em seguida, passará esses dados para uma tarefa do ECS back-end para executar processamento adicional e gravar os dados em um datastore. O Architect gostaria de reduzir as interdependências para que as falhas não afetem outros componentes.
+### Qual solução o arquiteto deve usar?
+
+* [X] Crie uma fila do Amazon SQS e configure o front-end para adicionar mensagens à fila e o back-end para pesquisar mensagens na fila (*)
+
+### Um desenvolvedor criou um aplicativo que usa o Amazon EC2 e uma instância de banco de dados MySQL do Amazon RDS. O desenvolvedor armazenou o nome de usuário e a senha do banco de dados em um arquivo de configuração no volume EBS raiz da instância do aplicativo EC2. Um Solutions Architect foi solicitado a projetar uma solução mais segura.
+### O que o Arquiteto de Soluções deve fazer para atender a esse requisito?
+
+* [X] Crie uma função IAM com permissão para acessar o banco de dados. Anexe essa função IAM à instância EC2. (*)
+
+### Uma empresa está trabalhando com um parceiro estratégico que tem um aplicativo que deve ser capaz de enviar mensagens para uma das filas do Amazon SQS da empresa. A empresa parceira tem sua própria conta AWS.
+### Como um arquiteto de soluções pode fornecer acesso de privilégios mínimos ao parceiro?
+
+* [X] Atualize a política de permissão na fila SQS para conceder a permissão sqs:SendMessage à conta AWS do parceiro. (*)
+
+### Um Solutions Architect foi encarregado de reimplantar um aplicativo em execução na AWS para habilitar alta disponibilidade. O aplicativo processa mensagens que são recebidas em uma fila ActiveMQ em execução em uma única instância do Amazon EC2. As mensagens são então processadas por um aplicativo consumidor em execução no Amazon EC2. Após processar as mensagens, o aplicativo consumidor grava os resultados em um banco de dados MySQL em execução no Amazon EC2.
+### Qual arquitetura oferece maior disponibilidade e baixa complexidade operacional?
+
+* [X] Implante o Amazon MQ com brokers ativos/em espera configurados em duas Zonas de Disponibilidade. Crie um grupo de Auto Scaling para as instâncias EC2 do consumidor em duas Zonas de Disponibilidade. Use um banco de dados MySQL do Amazon RDS com Multi-AZ habilitado. (*)
+
+### A capacidade de armazenamento se tornou um problema para uma empresa que executa servidores de aplicativos no local. Os servidores são conectados a uma combinação de soluções de armazenamento em bloco e armazenamento NFS. A empresa requer uma solução que suporte cache local sem reestruturar seus aplicativos existentes.
+### Que combinação de mudanças a empresa pode fazer para atender a esses requisitos? (Selecione DUAS.)
+
+* [X] Use um gateway de volume do AWS Storage Gateway para substituir o armazenamento em bloco. (*)
+
+* [X] Use um gateway de arquivo do AWS Storage Gateway para substituir o armazenamento NFS. (*)
+
+### Um bucket do Amazon S3 na região us-east-1 hospeda o conteúdo estático do site de uma empresa. O conteúdo é disponibilizado por meio de uma origem do Amazon CloudFront apontando para esse bucket. Uma segunda cópia do bucket é criada na região ap-southeast-1 usando replicação entre regiões. O arquiteto-chefe de soluções quer uma solução que forneça maior disponibilidade para o site.
+### Qual combinação de ações um arquiteto de soluções deve tomar para aumentar a disponibilidade? (Selecione DUAS.)
+
+* [X] Usando o bucket us-east-1 como o bucket primário e o bucket ap-southeast-1 como o bucket secundário, crie um grupo de origem do CloudFront. (*)
+
+* [X] Adicione uma origem para ap-southeast-1 ao CloudFront. (*)
+
 ###
 
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
+* [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
 * [X] Use AWS Secrets Manager. Ative a rotação automática. (*)
